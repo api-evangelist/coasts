@@ -1,0 +1,46 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/coast-guard/coasts/releases
+docs: https://github.com/coast-guard/coasts/releases
+scheme: semver
+prerelease: true
+current_version: v0.1.53
+entries:
+  - version: v0.1.53
+    date: '2026-04-20'
+    breaking: false
+    highlights:
+      - Made `coast build` functional without requiring a coastfile.
+      - Reduced cognitive complexity across multiple modules; cleared clippy suppressions.
+  - version: v0.1.52
+    date: '2026-04-13'
+    breaking: false
+    highlights:
+      - Fixed shared-service socat upstream configuration for Docker-in-Docker environments.
+  - version: v0.1.51
+    date: '2026-04-13'
+    breaking: false
+    highlights:
+      - Resolved shared-service container IP resolution before passing to host.
+      - Added integration tests for current-working-directory leak detection.
+  - version: v0.1.50
+    date: '2026-04-07'
+    breaking: false
+    highlights:
+      - Added a release-target build matrix to PR CI.
+  - version: v0.1.49
+    date: '2026-04-07'
+    breaking: false
+    highlights:
+      - Fixed CI build configurations.
+  - version: v0.1.48
+    date: '2026-04-07'
+    breaking: false
+    highlights:
+      - Updated CI for building coast-guard binaries.
+  - version: v0.1.47
+    date: '2026-04-07'
+    breaking: false
+    highlights:
+      - Improved Docker availability handling and daemon restart logic.
+      - Fixed SSH state management; added initial remote-branch support.

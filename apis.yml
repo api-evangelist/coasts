@@ -1,7 +1,27 @@
 aid: coasts
 name: Coasts
-description: Coasts is a company surfaced as a portfolio company of y-combinator and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Coasts (Containerized Hosts) is an open-source, MIT-licensed CLI tool that provides
+  localhost service isolation and orchestration for git worktrees. It spawns multiple
+  fully isolated development runtimes for the same project on a single machine, giving
+  each worktree its own ports, databases, and services so parallel AI coding agents
+  (Claude Code, Cursor, Codex, Conductor, and others) can build and test side by side
+  without clashing. Built on Docker Compose, with a thin CLI client talking to a local
+  coastd daemon over a unix socket plus a bundled React/Vite web observability UI, Coasts
+  is local-first and offline-capable, with optional extension to remote machines over SSH.
+  Backed by Y Combinator (Fall 2025) and founded by Jamie Sunderland and Dan Hyman.
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://coasts.dev/coasts-og.png
 url: https://raw.githubusercontent.com/api-evangelist/coasts/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,12 +31,62 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
+- Developer Tools
+- CLI
+- Git
+- Containers
+- Docker
+- Local Development
+- AI Agents
+- Developer Productivity
+- Open Source
+- DevOps
 apis: []
+common:
+- type: DomainSecurity
+  url: security/coasts-domain-security.yml
+- type: Website
+  url: https://coasts.dev
+- type: DeveloperPortal
+  url: https://coasts.dev/docs
+- type: Documentation
+  url: https://coasts.dev/docs
+- type: GettingStarted
+  url: https://coasts.dev/docs/getting-started
+- type: Blog
+  url: https://coasts.dev/blog
+- type: Support
+  url: https://coasts.dev/contact
+- type: Community
+  name: Discord
+  url: https://discord.gg/Nj87zwt7Kc
+- type: GitHubOrganization
+  url: https://github.com/coast-guard
+- type: SourceCode
+  url: https://github.com/coast-guard/coasts
+- type: License
+  name: MIT
+  url: https://github.com/coast-guard/coasts/blob/main/LICENSE
+- type: CLI
+  url: cli/coasts-cli.yml
+- type: ChangeLog
+  url: changelog/coasts-changelog.yml
+- type: Releases
+  url: https://github.com/coast-guard/coasts/releases
+- type: Packages
+  url: packages/coasts-packages.yml
+- type: LLMsTxt
+  url: llms/coasts-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

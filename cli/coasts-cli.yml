@@ -1,0 +1,68 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/coast-guard/coasts
+docs: https://coasts.dev/docs
+name: coast
+description: >-
+  First-party command-line tool for Coasts (Containerized Hosts). A thin CLI client
+  that talks to a local coastd daemon over a unix socket to build, run, and orchestrate
+  isolated containerized development runtimes ("coasts"), one per git worktree, plus a
+  bundled web observability UI served by the daemon.
+license: MIT
+binary: coast
+install:
+  - method: shell
+    command: eval "$(curl -fsSL https://coasts.dev/install)"
+    notes: Installs the release binary to ~/.coast/bin (see https://coasts.dev/install)
+distribution:
+  registry: github-releases
+  url: https://github.com/coast-guard/coasts/releases
+architecture:
+  - Thin CLI client (coast) talking to a local daemon over a unix socket
+  - coastd background daemon handling orchestration and state
+  - React + Vite web observability UI served by the daemon
+  - Docker Compose used to define each environment
+commands:
+  - name: build
+    signature: coast build
+    description: Build the environment (works with or without a coastfile).
+  - name: run
+    signature: coast run [instance]
+    description: Start an isolated instance.
+  - name: checkout
+    signature: coast checkout [instance]
+    description: Bind the canonical ports to a given instance.
+  - name: exec
+    signature: coast exec [instance] -- <cmd>
+    description: Run a command inside an instance's runtime for branch-specific work.
+  - name: ls
+    signature: coast ls
+    description: List instances.
+  - name: ps
+    signature: coast ps [instance]
+    description: Show the processes running in an instance.
+  - name: logs
+    signature: coast logs [instance]
+    description: View an instance's logs.
+  - name: ports
+    signature: coast ports [instance]
+    description: Display port mappings for an instance.
+  - name: rm
+    signature: coast rm [instance]
+    description: Remove an instance.
+  - name: cert info
+    signature: coast cert info
+    description: Display local root certificate information.
+  - name: cert export
+    signature: coast cert export
+    description: Export the local root certificate for trust.
+key_flows:
+  - name: Parallel agents across worktrees
+    steps:
+      - coast build
+      - coast run feature-a
+      - coast run feature-b
+      - coast checkout feature-a
+    description: >-
+      Build once, then spawn an isolated runtime per git worktree so multiple AI agents
+      can work in parallel without port or database conflicts.

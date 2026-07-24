@@ -1,0 +1,29 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/coast-guard/coasts/releases
+notes: >-
+  Coasts ships a single first-party CLI binary (`coast`), installed via a shell script
+  that pulls prebuilt release binaries from GitHub Releases. It is not published to a
+  language package registry (no npm/PyPI/crates.io/Homebrew formula found as of this
+  round). The command surface is catalogued in cli/coasts-cli.yml.
+packages:
+  - name: coast
+    kind: cli-binary
+    registry: github-releases
+    url: https://github.com/coast-guard/coasts/releases
+    install: eval "$(curl -fsSL https://coasts.dev/install)"
+    official: true
+    license: MIT
+registries_checked:
+  - registry: npm
+    query: coasts
+    status: 404
+  - registry: pypi
+    query: coasts
+    status: not-found
+  - registry: homebrew
+    query: coasts
+    status: 404
+  - registry: crates.io
+    query: coasts
+    status: not-found
