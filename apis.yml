@@ -46,6 +46,10 @@ tags:
 - DevOps
 apis: []
 common:
+- type: IssueTracker
+  url: https://github.com/coast-guard/coasts/issues
+- type: ContributionGuide
+  url: https://github.com/coast-guard/coasts/blob/main/CONTRIBUTING.md
 - type: DomainSecurity
   url: security/coasts-domain-security.yml
 - type: Website
