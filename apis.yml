@@ -10,6 +10,18 @@ description: >-
   coastd daemon over a unix socket plus a bundled React/Vite web observability UI, Coasts
   is local-first and offline-capable, with optional extension to remote machines over SSH.
   Backed by Y Combinator (Fall 2025) and founded by Jamie Sunderland and Dan Hyman.
+deliveryModel:
+  model: self-hosted
+  license: MIT
+  open_source: true
+  commercial: false
+  callable_host: false
+  label: Self-hosted open source · you run it yourself
+  confidence: high
+  source:
+  - license
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
